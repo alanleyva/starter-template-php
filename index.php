@@ -9,7 +9,9 @@
 	$core->core(__FILE__,'Alan L', '2017-07-23', '2017-07-23 23:19');
 	$core->render("main");
  ?>
-Hello
+<div class="container">
+	<h1>Hello</h1>
+</div><!-- /.container -->
 <?php  
 	include($full_path.'/back_end/core_end.php');
 ?>
