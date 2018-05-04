@@ -1,0 +1,26 @@
+/// layout colors	
+	$main-color:#FFBB28;
+	$main-color-dark:#292929;
+	$cta-cart:#EADB1C;
+	$cta-fav:#FF6028;
+	$color-success:#01E668;
+	$text-default:#303030;
+	
+
+/// screen sizes 
+	$screen-sm-min:768px;
+	$screen-md-min:992px;
+	$screen-lg-min:1200px;
+	
+// Z-index master list
+//
+// Warning: Avoid customizing these values. They're used for a bird's eye view
+// of components dependent on the z-axis and are designed to all work together.
+
+$zindex-dropdown:           1000 !default;
+$zindex-sticky:             1020 !default;
+$zindex-fixed:              1030 !default;
+$zindex-modal-backdrop:     1040 !default;
+$zindex-modal:              1050 !default;
+$zindex-popover:            1060 !default;
+$zindex-tooltip:            1070 !default;
