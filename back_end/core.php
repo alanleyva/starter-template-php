@@ -21,12 +21,23 @@ class core{
 	public $full_path="";
 	public $scripts = array();
 	public $external_scripts = array();
+	public $lang_c = "es"; /// page languaje - spanish by default
+	public $all_languages = array("/es","/en");
+	
+	/// Versions variables
+	/// Update this variables everytime you make an important update
+	public $js_version = 1.18; 
+	public $css_version = 1.9;
+	
 	function __construct(){
 			$full_path=strstr(dirname(__FILE__), 'public_html', true)."public_html/";
 			$this->full_path = str_replace("//", "/", $full_path);
 			if(isset($_SERVER['HTTP_HOST'])){
 			$this->dominio_url = str_replace("www.", "", $_SERVER['SERVER_NAME']);
+			$this->current_url = $_SERVER['REQUEST_URI'];
+			$this->current_url = str_replace($this->all_languages, "", $this->current_url);
 	}
+
 	}
 	function core($file, $programador, $fecha_creado, $fecha_editado){
 		$this->file=$file;
@@ -55,6 +66,18 @@ class core{
 		
 		
 	}
+	
+		static function lang($es, $en){
+		$request  = $_SERVER['REQUEST_URI'];
+		$params     = explode("/", $request);
+			$lang = (isset($params[1]) && $params[1]) ? $params[1]: "es";
+				if($lang=="es"){
+				return $es;
+				}else{
+				return $en;	
+				}
+					
+		}
 	
 }// fin de class
 
