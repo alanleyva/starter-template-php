@@ -23,11 +23,12 @@ class core{
 	public $external_scripts = array();
 	public $lang_c = "es"; /// page languaje - spanish by default
 	public $all_languages = array("/es","/en");
+	public $google_fonts = "Roboto:300,400,700"; /// Default google fonts
 	
 	/// Versions variables
 	/// Update this variables everytime you make an important update
-	public $js_version = 1.18; 
-	public $css_version = 1.9;
+	public $js_version = 1.0; 
+	public $css_version = 1.0;
 	
 	function __construct(){
 			$full_path=strstr(dirname(__FILE__), 'public_html', true)."public_html/";

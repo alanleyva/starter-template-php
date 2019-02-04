@@ -12,7 +12,7 @@
 <!--     <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet"> -->
     <link href="/css/bootstrap.min.css" rel="stylesheet">
     <link href="/css/font-awesome.css" rel="stylesheet">
-		<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=<?php echo $this->google_fonts; ?>" rel="stylesheet">
 		<link href="/css/application.css?v=<?php echo $core->css_version; ?>" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
